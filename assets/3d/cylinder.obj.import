@@ -1,0 +1,17 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/cylinder.obj-38c415864f9109848454f529ded6681c.mesh"
+
+[deps]
+
+files=[ "res://.import/cylinder.obj-38c415864f9109848454f529ded6681c.mesh" ]
+
+source_file="res://assets/3d/cylinder.obj"
+dest_files=[ "res://.import/cylinder.obj-38c415864f9109848454f529ded6681c.mesh", "res://.import/cylinder.obj-38c415864f9109848454f529ded6681c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )

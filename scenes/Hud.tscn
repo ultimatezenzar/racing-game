@@ -1,0 +1,180 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/2d/accelerate.png" type="Texture" id=2]
+[ext_resource path="res://assets/2d/accelerate_pressed.png" type="Texture" id=3]
+[ext_resource path="res://assets/2d/brake.png" type="Texture" id=4]
+[ext_resource path="res://assets/2d/brake_pressed.png" type="Texture" id=5]
+[ext_resource path="res://scenes/TouchJoystick.tscn" type="PackedScene" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 150
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 1 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="Hud" type="Node" index="0"]
+
+[node name="Speed" type="Label" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 13.0
+margin_top = 18.0
+margin_right = 114.0
+margin_bottom = 32.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Speed:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Pause", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="Fall Speed" type="Label" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 10.0
+margin_top = 60.0
+margin_right = 111.0
+margin_bottom = 74.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Fall Speed:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Pause", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="Current Lap" type="Label" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 10.0
+margin_top = 100.0
+margin_right = 111.0
+margin_bottom = 114.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Current Lap:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Pause", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="Time" type="Label" parent="." index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 10.0
+margin_top = 140.0
+margin_right = 111.0
+margin_bottom = 154.0
+rect_scale = Vector2( 2, 2 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Time:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Material", "Mouse", "Pause", "Rect", "Size Flags", "Theme", "Visibility", "custom_colors", "custom_constants", "custom_fonts", "custom_styles" ]
+
+[node name="Victory" type="Label" parent="." index="4"]
+
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -566.0
+margin_top = -89.0
+margin_right = 566.0
+margin_bottom = 92.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 5
+size_flags_vertical = 5
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+align = 1
+valign = 1
+uppercase = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Size Flags", "Theme", "custom_colors", "custom_fonts", "custom_styles" ]
+
+[node name="Accelerate" type="TouchScreenButton" parent="." index="5"]
+
+position = Vector2( 1108.35, 547.014 )
+scale = Vector2( 15, 15 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 3 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = "accelerate"
+visibility_mode = 1
+_sections_unfolded = [ "Material" ]
+
+[node name="Brake" type="TouchScreenButton" parent="." index="6"]
+
+position = Vector2( 917.738, 547.014 )
+scale = Vector2( 15, 15 )
+normal = ExtResource( 4 )
+pressed = ExtResource( 5 )
+bitmask = null
+shape = null
+shape_centered = true
+shape_visible = true
+passby_press = false
+action = "brake"
+visibility_mode = 1
+
+[node name="Touch Joystick" parent="." index="7" instance=ExtResource( 6 )]
+
+position = Vector2( 124.669, 602.868 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+dead_zone = 60
+circle_pad_radius = 40
+outer_ring_radius = 100
+touch_screen_only = true
+
+
